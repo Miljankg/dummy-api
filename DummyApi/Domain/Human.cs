@@ -20,4 +20,12 @@ public class Human
     public string SaySomething() => Phrases[Random.Shared.Next(Phrases.Length)];
 
     public int CountSomething() => Random.Shared.Next(1, 100);
+
+    public string Introduce(string name)
+    {
+        if (string.IsNullOrWhiteSpace(name))
+            return "Hi, I have no name.";
+
+        return $"Hi, my name is {name}.";
+    }
 }
