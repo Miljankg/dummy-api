@@ -13,7 +13,8 @@ public class Human
         "I was just about to say that.",
         "Does this look infected to you?",
         "I had a dream about spreadsheets again.",
-        "Technically, I'm always on time — the meeting is early."
+        "Technically, I'm always on time — the meeting is early.",
+        "I have a system. I just haven't explained it to anyone."
     ];
 
     public string SaySomething() => Phrases[Random.Shared.Next(Phrases.Length)];
