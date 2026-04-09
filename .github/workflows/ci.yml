@@ -3,6 +3,7 @@ name: CI
 on:
   push:
     branches: [main]
+  pull_request:
 
 jobs:
   test:
@@ -42,3 +43,10 @@ jobs:
           if [ -f coverage-report/SummaryGithub.md ]; then
             cat coverage-report/SummaryGithub.md >> $GITHUB_STEP_SUMMARY
           fi
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: TestResults/**/coverage.cobertura.xml
+          fail_ci_if_error: true
