@@ -17,4 +17,6 @@ public class Human
     ];
 
     public string SaySomething() => Phrases[Random.Shared.Next(Phrases.Length)];
+
+    public int CountSomething() => Random.Shared.Next(1, 100);
 }
