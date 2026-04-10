@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="DummyApi.Tests/DummyApi.Tests.csproj" />
+  <Project Path="DummyApi/DummyApi.csproj" />
+</Solution>
