@@ -14,7 +14,8 @@ public class Human
         "Does this look infected to you?",
         "I had a dream about spreadsheets again.",
         "Technically, I'm always on time — the meeting is early.",
-        "I have a system. I just haven't explained it to anyone."
+        "I have a system. I just haven't explained it to anyone.",
+        "This is fine."
     ];
 
     public string SaySomething() => Phrases[Random.Shared.Next(Phrases.Length)];
