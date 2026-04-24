@@ -14,10 +14,19 @@ public class Human
         "Does this look infected to you?",
         "I had a dream about spreadsheets again.",
         "Technically, I'm always on time — the meeting is early.",
-        "I have a system. I just haven't explained it to anyone."
+        "I have a system. I just haven't explained it to anyone.",
+        "I was today years old when I learned that."
     ];
 
     public string SaySomething() => Phrases[Random.Shared.Next(Phrases.Length)];
 
     public int CountSomething() => Random.Shared.Next(1, 100);
+
+    public string Introduce(string name)
+    {
+        if (string.IsNullOrWhiteSpace(name))
+            return "Hi, I have no name.";
+
+        return $"Hi, my name is {name}.";
+    }
 }
